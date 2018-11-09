@@ -15,10 +15,10 @@ import (
  * 2.自定資料結構 (無DB)
  * 3.參考 https://www.codementor.io/codehakase/building-a-restful-api-with-golang-a6yivzqdo
  * 4. URL 127.0.0.1:8080/people
- * 5. POST 數據範例{"firstname":"Jack","lastname":"Cheng", "address":{"city":"台中","state":"台灣"}}
+ * 5. POST 數據範例{"firstname":"King","lastname":"Cheng", "address":{"city":"台中","state":"台灣"}}
  *	> 須自行指定 /{id}
  * 
- * 6. $ go build && ./rest-api
+ * 6. $ go build && ./go-rest
  */
 
 
@@ -83,9 +83,9 @@ func DeletePerson(w http.ResponseWriter, r *http.Request) {
 
 // main function to boot up everything
 func main() {
-    people = append(people, Person{ID: "1", Firstname: "John", Lastname: "Doe", Address: &Address{City: "City X", State: "State X"}})
-    people = append(people, Person{ID: "2", Firstname: "Koko", Lastname: "Doe", Address: &Address{City: "City Z", State: "State Y"}})
-    people = append(people, Person{ID: "3", Firstname: "Francis", Lastname: "Sunday"})
+    people = append(people, Person{ID: "1", Firstname: "遠大", Lastname: "陳", Address: &Address{City: "Hsinchu", State: "Taiwan"}})
+    people = append(people, Person{ID: "2", Firstname: "拓明", Lastname: "江", Address: &Address{City: "City Z", State: "China"}})
+    people = append(people, Person{ID: "3", Firstname: "Jones", Lastname: "David"})
 
     //
     router := mux.NewRouter()
